@@ -95,3 +95,39 @@ const c = new Personaje(); // 'Constructor: Manz'
 
 c.method(); // 'Método: Manz'
 ---
+class Personaje {
+  name = "Manz";           // ES2020+
+
+  constructor() {
+    this.name = "Manz";    // ES2015+
+    console.log("Constructor: " + this.name);
+  }
+
+  metodo() {
+    console.log("Método: " + this.name);
+  }
+}
+
+const c = new Personaje(); // 'Constructor: Manz'
+
+c.name;     // 'Manz'
+c.metodo(); // 'Método: Manz'
+---
+class Personaje {
+  name;
+  energy;
+
+  constructor(name, energy = 10) {
+    this.name = name;
+    this.energy = energy;
+  }
+
+  get status() {
+    return '⭐'.repeat(this.energy);
+  }
+}
+
+const mario = new Personaje("Mario");
+mario.energy    // 10
+mario.status    // '⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐'
+---
