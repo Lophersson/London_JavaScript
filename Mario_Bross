@@ -1,0 +1,82 @@
+https://lenguajejs.com/javascript/oop/propiedades-clase/
+---
+class Personaje {
+  name;
+  energy = 10;
+
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const mario = new Personaje("Mario");     // { name: "Mario", energy: 10 }
+mario.name;                               // "Mario" (se puede acceder desde fuera)
+mario.name = "Evil Mario";
+mario.name;                               // "Evil Mario" (se ha modificado desde fuera)
+---
+
+class personajes {
+    name;
+    type = "Player";
+    lifes = 5;
+    energy = 10;
+
+    // Constructor para inicializar los personajes con nombre y vidas
+    constructor(name, lifes) {
+        this.name = name;
+        this.lifes = lifes;
+        console.log('Bienvenidos ' + this.name);
+    }
+
+    // Método para mostrar los detalles del personaje
+    mostrarDetalles() {
+        console.log(`Nombre: ${this.name}`);
+        console.log(`Tipo: ${this.type}`);
+        console.log(`Vidas: ${this.lifes}`);
+        console.log(`Energía: ${this.energy}`);
+    }
+
+    // Método para modificar la energía
+    modificarEnergia(cantidad) {
+        this.energy += cantidad;
+        console.log(`${this.name} ahora tiene ${this.energy} de energía.`);
+    }
+
+    // Método para modificar las vidas
+    modificarVidas(cantidad) {
+        this.lifes += cantidad;
+        console.log(`${this.name} ahora tiene ${this.lifes} vidas.`);
+    }
+}
+
+// Crear personajes
+let mario = new personajes("Mario", 5);
+let luigi = new personajes("Luigi", 4);
+let peach = new personajes("Peach", 6);
+
+// Modificar propiedades de los personajes
+mario.modificarEnergia(5);  // Mario gana 5 de energía extra
+luigi.modificarVidas(-1);   // Luigi pierde 1 vida
+peach.modificarEnergia(-3); // Peach pierde 3 de energía
+
+// Mostrar los detalles de cada personaje
+mario.mostrarDetalles();
+luigi.mostrarDetalles();
+peach.mostrarDetalles();
+---
+class Personaje {
+  constructor() {
+    const name = "Manz";
+    console.log("Constructor: " + name);
+  }
+
+  method() {
+    console.log("Método: " + name);
+  }
+}
+
+const c = new Personaje(); // 'Constructor: Manz'
+
+c.name;       // undefined
+c.method();   // 'Método: '
+---
