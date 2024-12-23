@@ -80,3 +80,18 @@ const c = new Personaje(); // 'Constructor: Manz'
 c.name;       // undefined
 c.method();   // 'Método: '
 ---
+class Personaje {
+  constructor() {
+    this.name = "Manz";  // Usamos 'this' para que 'name' sea una propiedad del objeto
+    console.log("Constructor: " + this.name);
+  }
+
+  method() {
+    console.log("Método: " + this.name);  // Accedemos a 'name' usando 'this'
+  }
+}
+
+const c = new Personaje(); // 'Constructor: Manz'
+
+c.method(); // 'Método: Manz'
+---
