@@ -131,3 +131,5 @@ const mario = new Personaje("Mario");
 mario.energy    // 10
 mario.status    // '⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐'
 ---
+https://lenguajejs.com/javascript/oop/metodos-clase/
+---
